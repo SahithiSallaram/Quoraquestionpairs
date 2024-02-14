@@ -1,21 +1,11 @@
 
 ## About this project
-Quora is a question-and-answer website where users may ask questions and get
-answers from other users. When a question is asked, Quora would use some methodology
-to find a subset of its existing question data base such that this subset contains
-questions which are “similar” to or about the same topic as the new question being
-asked. Once this subset has been identified, Quora would employ a machine learning
-technique to then determine if a duplicate question exists in this selected subset. <br>
-- The problem of finding if two question pairs have the same meaning or not requires a
-method to capture the semantic information and words vector features of questions
-rather than just a group of words.
-- This project aims to apply machine learning techniques to determine if any of the
-question pairs is a duplicate.
-- This relieves responders from answering repeated queries and directs users to the
-most appropriate responses, thereby improving the overall user experience.
-- This project uses SGDClassifier to implement both the linear classifiers logistic
-regression and Support vector machine. The model behavior was
-controlled with the loss parameter to make the SGDClassifier
-perform as Logistic Regression - loss parameter was set to ‘log’ and to make the
-SGDClassifier perform as SVM loss parameter was set to ‘hinge’. Each of these
-methods were also calibrated using the Sklearn Calibration Classifier.
+Quora, a popular question-and-answer website, employs a methodology to identify similar questions from its vast database when a new question is asked. Utilizing machine learning techniques, this project aims to enhance this process by automatically detecting duplicate question pairs. By predicting whether two questions have the same meaning, the project streamlines the user experience, prevents redundancy in responses, and directs users to the most relevant information.
+
+## Project Overview
+This project leverages a dataset containing pairs of questions from Quora. It preprocesses the questions using advanced techniques such as removing special characters, expanding contractions, and extracting features like TF-IDF vectors and fuzzy matching scores. Additionally, it employs machine learning models, including SGDClassifier with logistic regression and linear SVM, to classify duplicate question pairs.
+
+## Objectives
+- Semantic Understanding: Addressing the challenge of capturing semantic information and word vector features to determine the similarity between question pairs.
+- Improved User Experience: By automating the detection of duplicate questions, the project enhances the overall user experience on Quora.
+- Model Implementation: The project utilizes SGDClassifier to implement logistic regression and support vector machine (SVM) classifiers. The models are calibrated using Sklearn's Calibration Classifier to improve performance.
